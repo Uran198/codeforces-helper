@@ -24,5 +24,5 @@ problems.each do |x|
   end
 end
 
-mains.join(" ")
-`vim --cmd "set autochdir" -- #{mains}`
+exec 'vim --cmd "set autochdir" ' + mains.join(" ")
+
