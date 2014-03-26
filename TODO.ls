@@ -1,0 +1,1 @@
+Istead of copying 'fetch_tests.rb' to all directories copy it only to the root of contest dir. The same for 'run_tests.rb'. Reason: it makes no difference, but less copies. Modificate 'run_tests.rb' to watch for time limit exeed error, runtime errors.
