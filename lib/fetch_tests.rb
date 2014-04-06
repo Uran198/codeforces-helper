@@ -4,7 +4,7 @@ require 'open-uri'
 
 contest = ARGV[0]
 problem = ARGV[1]
-dir = "./tests/"
+dir = "./#{problem}/tests/"
 test_file = "test"
 Dir.mkdir dir unless Dir.exists? dir
 

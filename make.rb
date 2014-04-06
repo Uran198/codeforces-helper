@@ -8,6 +8,7 @@ files.map! { |x| x = cur+'/lib/'+x}
 
 Dir.mkdir dir unless Dir.exists? dir
 Dir.chdir dir do
+  files[0..1].each { |file| `cp #{file} . `}
   problems.each do |x|
     Dir.mkdir x unless Dir.exists? x
   end
@@ -18,8 +19,8 @@ mains = []
 problems.each do |x|
   path = dir+'/'+x+'/'
   mains << (path + "main.cpp")
-  files.each { |file| `cp #{file} #{path}` }
-  Dir.chdir path do
+  files[-2..-1].each { |file| `cp #{file} #{path}` }
+  Dir.chdir dir do
     `ruby fetch_tests.rb #{dir} #{x}`
   end
 end
