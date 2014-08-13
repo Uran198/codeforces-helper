@@ -1,5 +1,11 @@
 #!/usr/bin/ruby
 
+# How to use:
+#   execute with command
+#   ruby make.rb N
+#   N is a number of contest
+#
+
 dir = ARGV[0]
 problems = 'A'..'E'
 files = ["fetch_tests.rb", "run_tests.rb", "Makefile", "main.cpp"]
@@ -21,9 +27,10 @@ problems.each do |x|
   mains << (path + "main.cpp")
   files[-2..-1].each { |file| `cp #{file} #{path}` }
   Dir.chdir dir do
+    # FIXME Not very good for performance
     `ruby fetch_tests.rb #{dir} #{x}`
   end
 end
 
-exec 'vim --cmd "set autochdir" ' + mains.join(" ")
+exec 'vim +16 --cmd "set autochdir" ' + mains.join(" ")
 

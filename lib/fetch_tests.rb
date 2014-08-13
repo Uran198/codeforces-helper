@@ -1,4 +1,9 @@
 #!/usr/bin/ruby
+# How to use:
+#   ruby  fetch_tests.rb C P
+#   where C - number of a contest
+#         P - problem ID (A,B,C,D,E)
+
 require 'nokogiri'
 require 'open-uri'
 
