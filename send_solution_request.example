@@ -1,0 +1,75 @@
+POST /problemset/problem/25/B?csrf_token=7ea540adhh9bbg137gce2fd1f2h84f33 HTTP/1.1
+
+Host: codeforces.ru
+
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:31.0) Gecko/20100101 Firefox/31.0
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+Accept-Language: en-US,en;q=0.5
+
+Accept-Encoding: gzip, deflate
+
+Referer: http://codeforces.ru/problemset/problem/25/B
+
+Cookie: lastOnlineTimeUpdaterInvocation=1407937958154; lastOnlineTimeUpdaterInvocation=1407937378974; 39ce7=CFx52zJu; __utma=37394226.1818476526.1405590610.1407919803.1407936405.26; __utmz=37394226.1405590610.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); JSESSIONID=26AFCEB01745DAD1330B5B41C98B2012-n1; __utmc=37394226; lastOnlineTimeUpdaterInvocation=1407567071987; __utmb=37394226.12.10.1407936405
+
+Connection: keep-alive
+
+Content-Type: multipart/form-data; boundary=---------------------------12037525517746553911304848608
+
+Content-Length: 884
+
+
+
+-----------------------------12037525517746553911304848608
+
+Content-Disposition: form-data; name="csrf_token"
+
+
+
+7ea540adhh9bbg137gce2fd1f2h84f33
+
+-----------------------------12037525517746553911304848608
+
+Content-Disposition: form-data; name="action"
+
+
+
+submitSolutionFormSubmitted
+
+-----------------------------12037525517746553911304848608
+
+Content-Disposition: form-data; name="submittedProblemIndex"
+
+
+
+B
+
+
+
+-----------------------------12037525517746553911304848608
+
+Content-Disposition: form-data; name="programTypeId"
+
+
+
+8
+
+-----------------------------12037525517746553911304848608
+
+Content-Disposition: form-data; name="sourceFile"; filename="main.rb"
+
+
+
+n = gets.to_i
+gets.strip.each_char.with_index do |y,i|
+  if i > 0 && (i%2 == 0 && i < n-1 || i == n-3 && n%2 != 0);
+    print '-';
+  end;
+  print y;
+end;
+
+
+-----------------------------12037525517746553911304848608--
+
