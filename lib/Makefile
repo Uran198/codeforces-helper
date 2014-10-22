@@ -6,7 +6,8 @@ all: ${BIN}
 ${BIN}: main.cpp
 	${GCC} ${FLAGS} $^ -o ${BIN}
 run: ${BIN}
-	@ruby ../run_tests.rb $^ $(CURDIR)
+	# UGLY
+	@ruby ../../lib/run_tests.rb $^ $(CURDIR)
 %.o: %.cpp 
 	${GCC} ${FLAGS} -c $^
 clean:
