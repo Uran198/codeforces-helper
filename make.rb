@@ -2,8 +2,9 @@
 
 # How to use:
 #   execute with command
-#   ruby make.rb N
+#   ruby make.rb N [X]
 #   N is a number of contest
+#   X name of a problem, maybe multiple, default are A..E
 #
 require_relative 'lib/fetch_tests.rb'
 
@@ -19,7 +20,7 @@ STR
 end
 
 dir = ARGV[0]
-problems = ARGV[1].nil? ? 'A'..'E' : [ARGV[1]]
+problems = ARGV.size == 1 ? 'A'..'E' : ARGV[1..-1]
 files = ["Makefile", "main.cpp"]
 cur = Dir.pwd
 files.map! { |x| x = cur+'/lib/'+x}
