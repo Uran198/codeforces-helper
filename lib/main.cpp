@@ -7,6 +7,10 @@
 #include <algorithm>
 #include <map>
 #include <cstdlib>
+#include <stack>
+#include <queue>
+#include <cstring>
+
 #define mk make_pair
 #define pb push_back
 
